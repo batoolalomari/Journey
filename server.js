@@ -55,124 +55,6 @@ app.get('/clock',clock);
 app.get('/*',notFound);
 
 
-function handleDeleteBook(request,response){
-    let dataFromForm = request.body.id;    //id from the books/show page
-    let statement =`DELETE FROM journybooks WHERE id=${dataFromForm};`;
-    client.query(statement).then(data =>{
-        
-        response.redirect('/book');
-    }).catch((error) => {
-        console.log('error happend in the delete data...',error);
-      });
-}
-
-function bookUpdate(req,res){
-    let recievedUpdate = req.body;
-    let statement = `UPDATE journybooks SET title =$1, Author=$2, isbn=$3, image_url=$4, descr=$5  WHERE id=$6;`;
-    let values = [recievedUpdate.title, recievedUpdate.author, recievedUpdate.isbn, recievedUpdate.image_url, recievedUpdate.descr, recievedUpdate.id];
-    client.query(statement, values).then( data =>{
-      res.redirect(`/books/${recievedUpdate.id}`);
-      console.log('item updated ' + recievedUpdate.id);
-    }).catch((error) => {
-      console.log('error happend in the updated data...',error);
-    });
-}
-
-function favBook(request,response){
-    let DB = `SELECT * FROM journybooks;`;
-    client.query(DB).then((data)=>{
-        //variable to save the rows from the data object
-        let DBrow = data.rows;
-        //display 
-        response.render('pages/books/index',{x:DBrow,y:data.rowCount}); 
-    })
-    .catch(error =>{
-        console.log('error in favourite books');
-    })
-};
-
-function HandellBooks(req, res){
-  let newBookAdded = req.body;
-  let statement = `INSERT INTO journybooks (title, Author, isbn, image_url, descr) VALUES ($1,$2,$3,$4,$5) RETURNING id ;`;
-  let values = [newBookAdded.title,newBookAdded.author,newBookAdded.isbn,newBookAdded.image_url,newBookAdded.descr];
-  client.query(statement,values).then( data =>{
-    
-    res.redirect(`/books/${data.rows[0].id}`);
-
-  }).catch((error) => {
-    console.log('error happend in the HandellBookID SQL',error);
-  });
-}
-
-
-
-function handleBooks(request,response){
-    let URLid = request.params.id;
-    let DB = `SELECT * FROM journybooks WHERE id = ${URLid};`;
-    client.query(DB).then((data) => {
-        response.render('pages/books/books/show',{x:data.rows[0]});
-    });
-}
-// function HandellBooks(req, res) {
-    
-//     let newBookAdded = req.body;
-//     let check;
-//     client.query(`SELECT book_id FROM journybooks;`)
-   
-//         .then(v => {
-//             if(v.rows.length==0){
-//                 let statement = `INSERT INTO journybooks (title, author, isbn, image_url, descr, book_id) VALUES ($1,$2,$3,$4,$5,$6) RETURNING book_id;`;
-//                 let values = [newBookAdded.title, newBookAdded.author, newBookAdded.isbn, newBookAdded.image_url, newBookAdded.descr, newBookAdded.id];
-        
-//                 client.query(statement, values)
-//                     .then(data => {
-//                         let sql = `INSERT INTO conTable (books) VALUES ($1);`
-//                         let val = [data.rows[0].book_id];
-//                         client.query(sql,val)
-        
-//                     }).then(() => {
-                       
-//                         client.query(`SELECT id FROM users WHERE username = '${userName}';`)
-                        
-//                     }).then(value => {
-                        
-//                         client.query(`UPDATE conTable SET user_id = ${value};`)
-//                     }) .catch((error) => {
-//                         console.log('error happend in the HandellBookID SQL', error);
-//                     });
-//             }
-//             v.rows.map(ele => {
-                
-//                 if (ele === newBookAdded.id) {
-                    
-//                     check = true;
-//                 } else { check = false; }
-//             })
-//         })
-
-//     if (check==false) {
-//         let statement = `INSERT INTO journybooks (title, author, isbn, image_url, descr, book_id) VALUES ($1,$2,$3,$4,$5,$6) RETURNING book_id;`;
-//         let values = [newBookAdded.title, newBookAdded.author, newBookAdded.isbn, newBookAdded.image_url, newBookAdded.descr, newBookAdded.id];
-
-//         client.query(statement, values)
-//             .then(data => {
-//                 let sql = `INSERT INTO conTable (books) VALUES ($1);`
-//                 let val = [data.rows[0].book_id];
-//                 client.query(sql,val)
-
-//             }).then(() => {
-               
-//                 client.query(`SELECT id FROM users WHERE username = '${userName}';`)
-                
-//             }).then(value => {
-                
-//                 client.query(`UPDATE conTable SET user_id = ${value};`)
-//             }) .catch((error) => {
-//                 console.log('error happend in the HandellBookID SQL', error);
-//             });
-//     }
-// }
-
 // -------------------------------------------------------------------------------------------------------------------
 // Journy page rendering function
 function jounyRender(req, res) {
@@ -200,7 +82,6 @@ function signin(req, res) {
     return userName;
 
 }
-
 
 // -------------------------------------------------------------------------------------------------------------------
 // User information inserting function
@@ -251,18 +132,64 @@ function bookSearchPage(req, res) {
 // -------------------------------------------------------------------------------------------------------------------
 // Favourite Books page rendering function
 
-// function favBook(req,res){
-//     let DB = `SELECT * FROM users;`;
-//     client.query(DB).then((data)=>{
-//         //variable to save the rows from the data object
-//         let DBrow = data.rows;
-//         //display 
-//         response.render('pages/index',{x:DBrow,y:data.rowCount}); 
-//     })
-//     .catch(error =>{
-//         console.log('error in favourite books');
-//     })
-// }
+function favBook(request,response){
+    let DB = `SELECT * FROM journybooks;`;
+    client.query(DB).then((data)=>{
+        //variable to save the rows from the data object
+        let DBrow = data.rows;
+        //display 
+        response.render('pages/books/index',{x:DBrow,y:data.rowCount}); 
+    })
+    .catch(error =>{
+        console.log('error in favourite books');
+    })
+};
+
+// -------------------------------------------------------------------------------------------------------------------
+// Delete from Fav function
+
+function handleDeleteBook(request,response){
+    let dataFromForm = request.body.id;    //id from the books/show page
+    let statement =`DELETE FROM journybooks WHERE id=${dataFromForm};`;
+    client.query(statement).then(data =>{
+        
+        response.redirect('/book');
+    }).catch((error) => {
+        console.log('error happend in the delete data...',error);
+      });
+}
+
+// -------------------------------------------------------------------------------------------------------------------
+// Update Books info function
+
+function bookUpdate(req,res){
+    let recievedUpdate = req.body;
+    let statement = `UPDATE journybooks SET title =$1, Author=$2, isbn=$3, image_url=$4, descr=$5  WHERE id=$6;`;
+    let values = [recievedUpdate.title, recievedUpdate.author, recievedUpdate.isbn, recievedUpdate.image_url, recievedUpdate.descr, recievedUpdate.id];
+    client.query(statement, values).then( data =>{
+      res.redirect(`/books/${recievedUpdate.id}`);
+      console.log('item updated ' + recievedUpdate.id);
+    }).catch((error) => {
+      console.log('error happend in the updated data...',error);
+    });
+}
+
+// -------------------------------------------------------------------------------------------------------------------
+// Insert Books info function
+
+function HandellBooks(req, res){
+    let newBookAdded = req.body;
+    let statement = `INSERT INTO journybooks (title, Author, isbn, image_url, descr) VALUES ($1,$2,$3,$4,$5) RETURNING id ;`;
+    let values = [newBookAdded.title,newBookAdded.author,newBookAdded.isbn,newBookAdded.image_url,newBookAdded.descr];
+    client.query(statement,values).then( data =>{
+      
+      res.redirect(`/books/${data.rows[0].id}`);
+  
+    }).catch((error) => {
+      console.log('error happend in the HandellBookID SQL',error);
+    });
+  }
+
 // -------------------------------------------------------------------------------------------------------------------
 // Books searches results page rendering function
 
@@ -291,6 +218,17 @@ function Book(bookObj) {
     this.description = bookObj.volumeInfo.description ? bookObj.volumeInfo.description : 'No Description Found';
     this.image = bookObj.volumeInfo.imageLinks ? bookObj.volumeInfo.imageLinks.thumbnail : 'https://i.imgur.com/J5LVHEL.jpg';
     this.id = bookObj.id ? bookObj.id : 'No title Found';
+}
+
+// -------------------------------------------------------------------------------------------------------------------
+// Book details page rendering function
+
+function handleBooks(request,response){
+    let URLid = request.params.id;
+    let DB = `SELECT * FROM journybooks WHERE id = ${URLid};`;
+    client.query(DB).then((data) => {
+        response.render('pages/books/books/show',{x:data.rows[0]});
+    });
 }
 
 // -------------------------------------------------------------------------------------------------------------------
