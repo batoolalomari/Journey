@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../public/style/books-style/index-style.css">
+    <title>Search Results</title>
+</head>
+
+<body>
+    <h1>You Got These Results</h1>
+
+    <% key.forEach(element =>{ %>
+    <div>
+        <img src="<%= element.image %>" alt="">
+        <h2><%= element.title %></h2>
+        <h4><%= element.author %></h4>
+        <p><%= element.description %></p>
+        <h6><%= element.isbn %></h6>
+
+        <form action="/books" method="POST">
+            <div class="form_div" style="display: none;">
+                <input type="hidden" id="id" name="id" value="<%=  element.id %>"><br><br>
+                <label for="title">Book Title:</label><br>
+                <input type="text" id="title" name="title" value="<%=  element.title %>"><br><br>
+                <label for="author">Book author:</label><br>
+                <input type="text" id="author" name="author" value="<%=  element.author %>"><br><br>
+                <label for="isbn">Book isbn:</label><br>
+                <input type="text" id="isbn" name="isbn" value="<%=  element.isbn %>"><br><br>
+                <label for="image_url">Book Img:</label><br>
+                <input type="text" id="image_url" name="image_url" value="<%= element.image %>"><br><br>
+                <label for="descr">Book description:</label><br>
+                <textarea id="descr" name="descr" rows="4" cols="50">
+                  <%= element.description %>
+                  </textarea><br><br>
+            </div>
+            <input type="submit" value="Add To My Favourite Books">
+        </form>
+    </div>
+    <% }); %>
+    <a href="/book">Back To Home Page</a>
+
+</body>
+
+</html>

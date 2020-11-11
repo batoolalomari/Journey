@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../public/style/gallery-style/gallerySearchResult.css">
+</head>
+
+<body>
+
+    <div class='box'>
+
+        <% searchResults.forEach( (gallery,index) => { %>
+
+
+        <span style="--i:<%= index+1 %>;"><img src="<%= gallery.previewURL %>" alt=""></span>
+
+
+
+        <% }) %>
+
+
+        </div>
+
+      <a class="homeButn" href="/gallery">Back To Gallery</a>
+
+</body>
+
+</html>
