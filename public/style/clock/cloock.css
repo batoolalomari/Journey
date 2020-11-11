@@ -1,0 +1,263 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    display: grid;
+    width: 100%;
+    height: 95%;
+    place-items: center;
+    
+    background: #F0EAD6
+    ;
+}
+
+@media screen and (max-width: 600px) {
+    .homeButn {    z-index: 1000;    margin-top: 43%;    width: 82px;    position: fixed;    left: 0px;    bottom: 7px;}
+    .wrapper {
+        padding: 3px 10px 3px 10px;
+        height: 100px;
+        width: 50%;
+        
+        position: relative;
+        background: #031321;
+        border-radius: 10px;
+        cursor: no-drop;
+        animation: animate 3.5s linear infinite;
+    }
+    .wrapper .display
+    /* .wrapper span */
+    {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .wrapper .display {
+        z-index: 9;
+        height: 95px;
+        width: 95%;
+        background: #F3D6E4;
+        border-radius: 66px;
+        text-align: center;
+        position: relative;
+        -webkit-box-reflect: below 10px linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    }
+    .display #time {
+        line-height: 95px;
+       
+        font-size: 50px;
+        font-weight: 600;
+        letter-spacing: 5px;
+        background: linear-gradient(135deg, #066403, #040c75, #c4acc1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: animate 1.5s linear infinite;
+    }
+    @keyframes animate {
+        100% {
+            filter: hue-rotate(360deg);
+        }
+    }
+    .wrapper span {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        background: inherit;
+    }
+    .wrapper span:first-child {
+        filter: blur(7px);
+    }
+    .wrapper span:last-child {
+        filter: blur(20px);
+    }
+    input {
+        margin: 5% 0% 0 15%;
+        background: #031321;
+        border: 2px #031321 solid;
+        border-radius: 8px;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 120%;
+        width: 70%;
+        height: 40px;
+        /* animation: animate 1.5s linear infinite; */
+    }
+    button {
+        margin: 5% 0% 0 35%;
+        width: 30%;
+        height: 30px;
+        font-size: 100%;
+        background: #F0EAD6;
+        border: 2px #031321 solid;
+        border-radius: 8px;
+       
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 950px) {
+    .homeButn {    z-index: 1000;    margin-top: 43%;    width: 82px;    position: fixed;    left: 0px;    bottom: 7px;}
+    .wrapper {
+        padding: 3px 10px 3px 10px;
+        height: 100px;
+        width: 50%;
+        
+        position: relative;
+        background: #031321;
+        border-radius: 10px;
+        cursor: no-drop;
+        animation: animate 3.5s linear infinite;
+    }
+    .wrapper .display
+    /* .wrapper span */
+    {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .wrapper .display {
+        z-index: 9;
+        height: 95px;
+        width: 95%;
+        background: #F3D6E4;
+        border-radius: 66px;
+        text-align: center;
+        position: relative;
+        -webkit-box-reflect: below 10px linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    }
+    .display #time {
+        line-height: 95px;
+       
+        font-size: 50px;
+        font-weight: 600;
+        letter-spacing: 5px;
+        background: linear-gradient(135deg, #066403, #040c75, #c4acc1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: animate 1.5s linear infinite;
+    }
+    @keyframes animate {
+        100% {
+            filter: hue-rotate(360deg);
+        }
+    }
+    .wrapper span {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        background: inherit;
+    }
+    .wrapper span:first-child {
+        filter: blur(7px);
+    }
+    .wrapper span:last-child {
+        filter: blur(20px);
+    }
+    input {
+        margin: 5% 0% 0 15%;
+        background: #031321;
+        border: 2px #031321 solid;
+        border-radius: 8px;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 120%;
+        width: 70%;
+        height: 40px;
+        /* animation: animate 1.5s linear infinite; */
+    }
+    button {
+        margin: 5% 0% 0 35%;
+        width: 30%;
+        height: 30px;
+        font-size: 100%;
+        background: #F0EAD6;
+        border: 2px #031321 solid;
+        border-radius: 8px;
+       
+    }
+}
+
+@media screen and (min-width: 950px) {
+    .homeButn {    z-index: 1000;    margin-top: 43%;    width: 82px;    position: fixed;    left: 0px;    bottom: 7px;}
+    .wrapper {
+        padding: 3px 10px 3px 10px;
+        height: 100px;
+        width: 50%;
+        
+        position: relative;
+        background: #031321;
+        border-radius: 10px;
+        cursor: no-drop;
+        animation: animate 3.5s linear infinite;
+    }
+    .wrapper .display
+    /* .wrapper span */
+    {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .wrapper .display {
+        z-index: 9;
+        height: 95px;
+        width: 95%;
+        background: #F3D6E4;
+        border-radius: 66px;
+        text-align: center;
+        position: relative;
+        -webkit-box-reflect: below 10px linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    }
+    .display #time {
+        line-height: 95px;
+       
+        font-size: 50px;
+        font-weight: 600;
+        letter-spacing: 5px;
+        background: linear-gradient(135deg, #066403, #040c75, #c4acc1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: animate 1.5s linear infinite;
+    }
+    @keyframes animate {
+        100% {
+            filter: hue-rotate(360deg);
+        }
+    }
+    .wrapper span {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        background: inherit;
+    }
+    .wrapper span:first-child {
+        filter: blur(7px);
+    }
+    .wrapper span:last-child {
+        filter: blur(20px);
+    }
+    input {
+        margin: 5% 0% 0 15%;
+        background: #031321;
+        border: 2px #031321 solid;
+        border-radius: 8px;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 120%;
+        width: 70%;
+        height: 40px;
+        /* animation: animate 1.5s linear infinite; */
+    }
+    button {
+        margin: 5% 0% 0 35%;
+        width: 30%;
+        height: 30px;
+        font-size: 100%;
+        background: #F0EAD6;
+        border: 2px #031321 solid;
+        border-radius: 8px;
+       
+    }
+}

@@ -1,0 +1,17 @@
+label{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+input[type="text"],textarea{
+    padding: 5px;
+    background: transparent;
+    border: 1px black solid;
+    border-radius: 8px;
+    transition: 1.2s;
+    width: 100%;
+    margin-top: 10px;
+}
+input[type="text"]:hover,textarea:hover{
+    box-shadow: 0 0 10px cadetblue,0 0 10px cadetblue;
+    border: none;
+}

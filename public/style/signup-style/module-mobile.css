@@ -20,7 +20,7 @@
         font-weight: bold;
         color: #2A293E;
     }
-    .formbox input[type="text"],input[type="password"]{
+    .formbox input[type="email"],input[type="password"]{
         background-color: rgba(128,128,128,0);
         border: none;
         border-bottom: 2px solid #2A293E;
@@ -28,7 +28,7 @@
         height: 40px;
     
     }
-    .formbox input[type="text"]:focus,input[type="password"]:focus{
+    .formbox input[type="email"]:focus,input[type="password"]:focus{
         border-bottom: 2px solid  #264e36;
     }
     .formbox button{

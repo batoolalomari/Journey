@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;1,900&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poopins', sans-serif;
+
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: whitesmoke;
+
+        }
+
+        .content {
+            position: relative;
+        }
+
+        .content h2 {
+            position: absolute;
+
+            transform: translate(-50%, -50%);
+            font-size: 8em;
+        }
+
+        .content h2:nth-child(1) {
+
+            color: transparent;
+            -webkit-text-stroke: 2px whitesmoke;
+
+
+        }
+
+        .content h2:nth-child(2) {
+
+            color: #f3e0be;
+            animation: animate 4s ease-in-out infinite;
+
+
+        }
+
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -999;
+        }
+
+        @keyframes animate {
+
+            0%,
+            100% {
+                clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 6%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+            }
+
+            50% {
+                clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+            }
+        }
+
+        /*Tablet */
+
+        @media screen and (min-width: 767px) and (max-width: 960px) {
+            #myVideo {
+                position: fixed;
+                right: 0;
+                bottom: 0;
+                min-width: 100%;
+                min-height: 100%;
+                z-index: -999;
+            }
+        }
+
+        /*mobilr*/
+        @media screen and (max-width: 766px) {
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poopins', sans-serif;
+
+            }
+
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                background: whitesmoke;
+
+            }
+
+            .content {
+                position: relative;
+            }
+
+            .content h2 {
+                position: absolute;
+
+                transform: translate(-50%, -50%);
+                font-size: 4.5em;
+            }
+
+            #myVideo {
+                position: fixed;
+                right: 0;
+                bottom: 0;
+                min-width: 100%;
+                min-height: 100%;
+                z-index: -999;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body onload="btnSearchClick()">
+
+    <video autoplay muted loop id="myVideo">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-waves-crash-on-a-shore-with-boulders-1088-large.mp4"
+            type="video/mp4">
+    </video>
+    <!--img  src="https://www.thelogomix.com/files/u2/journey.jpg" alt=""-->
+
+    <div class="content">
+        <h2>Journey</h2>
+        <h2>Journey</h2>
+
+    </div>
+
+    <form action="/index" id="ismForm"></form>
+
+    <script>
+
+        function submitForm() { // submits form
+            document.getElementById("ismForm").submit();
+        }
+        function btnSearchClick() {
+            if (document.getElementById("ismForm")) {
+                setTimeout("submitForm()", 7000); // set timout 
+            }
+        }
+    
+         
+
+    </script>
+
+
+
+</body>
+
+</html>

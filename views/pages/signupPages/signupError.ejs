@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up</title>
-    <link rel="stylesheet" href="style/sign-up-style.css">
+    <link rel="stylesheet" href="/public/style/sign-up-style.css">
 </head>
 
 <body>
@@ -18,13 +18,16 @@
         
         <div class="right">
             <div class="formbox">
-                <form action="">
-                    <p class="form-lables">Username</p>
-                    <input type="text" name="username" placeholder="Online" required>
+                <form action="/signup" method="POST">
+                    <p class="form-lables">E-mail</p>
+                    <input type="email"  name="username" value="" placeholder="Online" pattern="^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.(com||net||org)$" title="is not a valid email address" required>
                     <p class="form-lables">Password</p>
-                    <input type="password" name="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;" required>
+                    <input type="password" id="password" name="password" value="" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$" title="password between 8 to 15 characters which contain at least one lowercase letter,one uppercase letter, one numeric digit, and one special character" required>
                     <p class="form-lables">Confirm your password</p>
-                    <input type="password" name="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;" required>
+                    <input type="password" id="confirm_password" name="confirmPassword" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;" required>
+                            <br>
+                        <span ><%= errorMessage %> </span>
+                    
                     <br>
                     <button>
                         <span></span>
@@ -34,7 +37,7 @@
                         Sign up
                     </button>
                     <p class="signUp-p">Already have an account?</p>
-                    <a href="signin.html">Sign in</a>
+                    <a href="/index">Sign in</a>
                 </form>
             </div>
         </div>

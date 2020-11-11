@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="stylesheet" href="../../../public/style/clock/cloock.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <a href="/category"><img class="homeButn" src="../../../public/style/home.png"></a>
+    <div class="wrapper">
+        <div class="display">
+            <div id="time" class="x"></div>
+        </div>
+        <!-- <span></span>
+        <span></span> -->
+    </div>
+
+
+
+
+
+    <form action="/actiob_page.php" id='searchForm'>
+        <input type="search" name='input' placeholder="search_region" id='searchInput2' autocomplete="off" required>
+        <input type="search" name='input' placeholder="search_city" id='searchInput' autocomplete="off" required>
+        <button id="searchClickIcon" type="submit">search</button>
+    </form>
+
+    <div class="wrapper">
+        <div class="display">
+            <div id="time" class="z"></div>
+        </div>
+        <!-- <span></span>
+        <span></span> -->
+    </div>
+
+    <div id="searchResult">
+        <script>
+            $(document).ready(function() {
+
+                $(document).on('submit', '#searchForm', function(e) {
+                    let searchInput = $('#searchInput').val()
+                    let searchInput2 = $('#searchInput2').val()
+                    e.preventDefault();
+                    $.ajax({
+                        url: `http://worldtimeapi.org/api/timezone/${searchInput2}/${searchInput}`,
+                        type: 'GET',
+
+                        success: function(res) {
+                            let container = $('#searchResult');
+                            let searchResult = $('.z')
+                            res.datetime;
+                            console.log(res);
+                            searchResult.html(res.datetime.slice(11, 19))
+                        }
+                    })
+
+
+                })
+
+
+
+            })
+        </script>
+    </div>
+    <script>
+        setInterval(() => {
+
+            const time = document.querySelector(".x");
+            let date = new Date();
+            let hours = date.getHours();
+            let minutes = date.getMinutes();
+            let seconds = date.getSeconds();
+            let session = "AM";
+            if (hours > 12) {
+                session = "PM";
+                hours = hours - 12;
+            }
+            if (seconds < 10) {
+                seconds = "0" + seconds;
+            }
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+            if (hours < 10) {
+                hours = "0" + hours;
+            }
+            hours.textContent = hours + ":";
+            minutes.textContent = minutes + ":";
+            seconds.textContent = seconds;
+            time.textContent = hours + ":" + minutes + ":" + seconds + session;
+
+        });
+    </script>
+</body>
+
+</html>
