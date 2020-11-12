@@ -9,11 +9,19 @@ body {
     height: 95%;
     place-items: center;
     
-    background: #F0EAD6
-    ;
+   
+   
 }
 
 @media screen and (max-width: 600px) {
+    #myVideo{
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%; 
+        min-height: 100%;
+        z-index: -999;
+    }
     .homeButn {    z-index: 1000;    margin-top: 43%;    width: 82px;    position: fixed;    left: 0px;    bottom: 7px;}
     .wrapper {
         padding: 3px 10px 3px 10px;
@@ -42,23 +50,17 @@ body {
         border-radius: 66px;
         text-align: center;
         position: relative;
-        -webkit-box-reflect: below 10px linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+        
     }
     .display #time {
         line-height: 95px;
-       
+        border: 3px solid black;
+        border-radius: 20px;
+        color: whitesmoke;
+        min-height: 100px;
         font-size: 50px;
         font-weight: 600;
         letter-spacing: 5px;
-        background: linear-gradient(135deg, #066403, #040c75, #c4acc1);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: animate 1.5s linear infinite;
-    }
-    @keyframes animate {
-        100% {
-            filter: hue-rotate(360deg);
-        }
     }
     .wrapper span {
         height: 100%;
@@ -97,6 +99,14 @@ body {
 }
 
 @media screen and (min-width: 601px) and (max-width: 950px) {
+    #myVideo{
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%; 
+        min-height: 100%;
+        z-index: -999;
+    }
     .homeButn {    z-index: 1000;    margin-top: 43%;    width: 82px;    position: fixed;    left: 0px;    bottom: 7px;}
     .wrapper {
         padding: 3px 10px 3px 10px;
@@ -104,7 +114,7 @@ body {
         width: 50%;
         
         position: relative;
-        background: #031321;
+        
         border-radius: 10px;
         cursor: no-drop;
         animation: animate 3.5s linear infinite;
@@ -121,27 +131,21 @@ body {
         z-index: 9;
         height: 95px;
         width: 95%;
-        background: #F3D6E4;
+       
         border-radius: 66px;
         text-align: center;
         position: relative;
-        -webkit-box-reflect: below 10px linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+       
     }
     .display #time {
         line-height: 95px;
-       
+        border: 3px solid black;
+        border-radius: 20px;
+        color: whitesmoke;
+        min-height: 100px;
         font-size: 50px;
         font-weight: 600;
         letter-spacing: 5px;
-        background: linear-gradient(135deg, #066403, #040c75, #c4acc1);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: animate 1.5s linear infinite;
-    }
-    @keyframes animate {
-        100% {
-            filter: hue-rotate(360deg);
-        }
     }
     .wrapper span {
         height: 100%;
@@ -180,6 +184,14 @@ body {
 }
 
 @media screen and (min-width: 950px) {
+    #myVideo{
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%; 
+        min-height: 100%;
+        z-index: -999;
+    }
     .homeButn {    z-index: 1000;    margin-top: 43%;    width: 82px;    position: fixed;    left: 0px;    bottom: 7px;}
     .wrapper {
         padding: 3px 10px 3px 10px;
@@ -187,7 +199,7 @@ body {
         width: 50%;
         
         position: relative;
-        background: #031321;
+        
         border-radius: 10px;
         cursor: no-drop;
         animation: animate 3.5s linear infinite;
@@ -204,27 +216,21 @@ body {
         z-index: 9;
         height: 95px;
         width: 95%;
-        background: #F3D6E4;
+        
         border-radius: 66px;
         text-align: center;
         position: relative;
-        -webkit-box-reflect: below 10px linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+        
     }
     .display #time {
         line-height: 95px;
-       
+        border: 3px solid black;
+        border-radius: 20px;
+        color: whitesmoke;
+        min-height: 100px;
         font-size: 50px;
         font-weight: 600;
         letter-spacing: 5px;
-        background: linear-gradient(135deg, #066403, #040c75, #c4acc1);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: animate 1.5s linear infinite;
-    }
-    @keyframes animate {
-        100% {
-            filter: hue-rotate(360deg);
-        }
     }
     .wrapper span {
         height: 100%;
@@ -248,8 +254,11 @@ body {
         font-size: 120%;
         width: 70%;
         height: 40px;
+        
         /* animation: animate 1.5s linear infinite; */
     }
+   
+    
     button {
         margin: 5% 0% 0 35%;
         width: 30%;
@@ -258,6 +267,13 @@ body {
         background: #F0EAD6;
         border: 2px #031321 solid;
         border-radius: 8px;
+        cursor: pointer;
+        transition: 1.2s;
        
+    }
+    button:hover{
+        background: rgba(42,41,62,1);
+        color: white;
+        border: 2px white;
     }
 }

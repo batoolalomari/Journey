@@ -7,17 +7,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../../../public/style/books-style/search-for-book-style.css">
     <title>Book Not Founds</title>
+    <style>
+        a{
+    background: rgba(235, 228, 228, 0.8);
+    display: inline-block;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    top: 2%;
+    left: 85%;
+    cursor: pointer;
+    transition: 1.2s;
+}
+a:hover{
+    background: rgba(42,41,62,1);;
+    color: white;
+    border: 2px white;
+}
+    </style>
 </head>
 
 <body>
     <header>
     </header>
     <main>
+        <a id="error" href="/book">Back To Home Page</a>
         <div class="container">
             <div id="error">
                 <h1>Sorry, This book is not available. <br>
                     Thank you for choosing us. </h1>
-                <a id="error" href="/book">Back To Home Page</a>
             </div>
         </div>
     </main>

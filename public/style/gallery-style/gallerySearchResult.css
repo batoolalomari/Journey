@@ -3,23 +3,30 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .homeButn {    
-    width: 15%;
-    border: 2px solid gray;
-    position: absolute;
-    left: 2%;
-    top: 2%;
-    text-align: center;
+    
+    display: inline-block;
+    padding: 10px;
+    border-radius: 8px;
     text-decoration: none;
-    padding: 8px;
-    color: black;
     font-weight: bold;
+    color:white;
+    background-color:rgba(42,41,62,1);
+    position: absolute;
+    top: 4%;
+    left: 85%;
     cursor: pointer;
+    transition: 1.2s;
+
     }
     .homeButn:hover{
-        background-color: indigo;
-        color: #fff;
+        background:  #99ccff;
+        color: #264e36;
+        border: 2px white;
     }
+   
+    
 #myVideo {
     position: fixed;
     right: 0;

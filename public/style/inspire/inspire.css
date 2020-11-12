@@ -1,5 +1,5 @@
 body{
-  font-family: 'Open Sans', arial, sans-serif;
+  font-family:'Times New Roman', Times, serif;
   background:rgb(123, 158, 158);
 
 }
@@ -80,9 +80,9 @@ body{
   background-color:#008080; background-color: rgba(0, 128, 128, 0.8);
   font-family: 'Raleway', sans-serif;
   
-  -webkit-transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
-  -ms-transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
-  transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
+  -webkit-transition: top .5s ease-out, bottom .5s ease-out, .5s padding .5s ease-out;
+  -ms-transition: top .5s ease-out, bottom .5s ease-out, .5s padding .5s ease-out;
+  transition: top .5s ease-out, bottom .5s ease-out, .5s padding .5s ease-out;
 }
 #categories li h1{
   bottom:110%;
@@ -166,9 +166,9 @@ body{
   background-color:#008080; background-color: rgba(0, 128, 128, 0.8);
   font-family: 'Raleway', sans-serif;
   
-  -webkit-transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
-  -ms-transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
-  transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
+  -webkit-transition: top .5s ease-out, bottom .5s ease-out, .5s padding .5s ease-out;
+  -ms-transition: top .5s ease-out, bottom .5s ease-out, .5s padding .5s ease-out;
+  transition: top .5s ease-out, bottom .5s ease-out, .5s padding .5s ease-out;
 }
 #categories li h1{
   bottom:110%;
