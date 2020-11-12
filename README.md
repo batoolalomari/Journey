@@ -55,13 +55,32 @@ Our app for entertainment the user  , we will create a vital environment with go
 
 ## wireframe :
 
+![](start.png)
+
+![](sign.png)
+
+![](signUp.png)
+
+![](app.png)
+
+![](book.png)
+
+![](musi.png)
+
+![](gallery.png)
+
+![](time.png)
+
+![](inspire.png)
+
+
 ## color palette :
 
 ![](color.png)
 
-![](color2.png)
+![](color2.jpg)
 
-![](color3.png)
+![](color3.jpg)
 
 
 
