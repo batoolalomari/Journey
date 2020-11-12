@@ -51,36 +51,36 @@ Our app for entertainment the user  , we will create a vital environment with go
 
 ## Domain Modeling
 
-![](model.png)
+![](diagrams/model.png)
 
 ## wireframe :
 
-![](start.png)
+![](wireframe/start.png)
 
-![](sign.png)
+![](wireframe/sign.png)
 
-![](signUp.png)
+![](wireframe/signUp.png)
 
-![](app.png)
+![](wireframe/app.png)
 
-![](book.png)
+![](wireframe/book.png)
 
-![](musi.png)
+![](wireframe/musi.png)
 
-![](gallery.png)
+![](wireframe/gallery.png)
 
-![](time.png)
+![](wireframe/time.png)
 
-![](inspire.png)
+![](wireframe/inspire.png)
 
 
 ## color palette :
 
-![](color.png)
+![](color/color.png)
 
-![](color2.jpg)
+![](color/color2.jpg)
 
-![](color3.jpg)
+![](color/color3.jpg)
 
 
 
