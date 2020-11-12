@@ -15,7 +15,7 @@ In "Journey" website is especially aimed for all user around the world
 
 Our journey website will not develop to be an IOS application.
 
-1.2.1 Responsibilities
+**1.2.1 Responsibilities**
 
 In "Journey" there is a role for each team member :
 
@@ -23,11 +23,11 @@ Supervisor
 Dr. Hanaa Maratouq
 
 TAs:
-1- Mr.Shihab
-2- Mr.Samer
+1. Mr.Shihab
+2. Mr.Samer
 
 Project Manager
-1.Batool Alomari
+1. Batool Alomari
 
 Developer
 1. Abdulla Mouazen
@@ -40,10 +40,10 @@ Analysts
 1. batool alomari
 2. Ahmad Almohammad
 
-1.2.3 Minimum Viable Product vs
+**1.2.3 Minimum Viable Product**
 The MVP for our project is to make a full website of apps including one app with full functionality.
 
-1.2.4 Stretch
+**1.2.4 Stretch**
 We put amusic app as stretch goal for us to implement in the up comming days.
 
 # 1.3 Functional Requirements
