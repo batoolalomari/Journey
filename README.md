@@ -1,16 +1,16 @@
-# Journey
+
 
 # Project Name : Journey 
 
 # Team members:
 
-## 1- Ahmad Al-Mohammad
+### 1- Ahmad Al-Mohammad
 
-## 2- Tamara Hussien 
+### 2- Tamara Hussien 
 
-## 3- Abdulla Mouazen
+### 3- Abdulla Mouazen
 
-## 4- Batool Alomari
+### 4- Batool Alomari
 
  
 ### Project Description : 
@@ -21,7 +21,7 @@ Our app for entertainment the user  , we will create a vital environment with go
 ### User Stories:
 
 #### 1. starter page
-**As i user i want the website when start have a starter animation with the website name **
+**As i user i want the website when start have a starter animation with the website name**
 
 - Use a starter animation before go to the main page
 - Main page
@@ -42,7 +42,7 @@ Our app for entertainment the user  , we will create a vital environment with go
 - Add button to enable user to select book 
 - Add button to enable user to add book to his  favorite
 
-**As a user i want to seach the time around the world **
+**As a user i want to seach the time around the world**
 
 - Create book app page 
 - Add search to the page that enable the user to seach the resiogn and the countries
