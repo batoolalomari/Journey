@@ -10,10 +10,12 @@
 
 <body>
 
-    <h1>You Have These <span><%= y %></span> Books</h1><!-- display count -->
-
+    <div id="anchor">
+    <a href="/book">Back To Home Page</a>
+    </div>
     <% x.forEach((value,index) =>{ %>
-    <div id="bookDiv">
+    <div id="fav">
+        <div id="topFav">
         <img src="<%= value.image_url %>">
         <h2>
             <%= value.title %>
@@ -21,12 +23,12 @@
         <h4 id="author">
             <%= value.author %>
         </h4>
+    </div>
         <button id="detailsBtn" type="submit" value="Show Details"
             onclick="location.href = `/books/<%= value.id %>`;">Show Details</button>
 
     </div>
     <% }); %>
-    <a href="/book">Back To Home Page</a>
 </body>
 
 </html>

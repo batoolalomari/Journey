@@ -3,6 +3,7 @@
 const client = require('./client.js');
 
 
+
 var checkNotInsideDatabase = true;
 var signinChecking = {
 
@@ -28,8 +29,8 @@ var signinChecking = {
                     let confirmError = `You should use same password`;
                     res.render('pages/signupPages/signupError', { errorMessage: confirmError });
                 }
-                if (password === confirmPassword && checkNotInsideDatabase) {
-
+                if (password === confirmPassword && checkNotInsideDatabase===true) {
+                     console.log('hello');
                     let SQL = `INSERT INTO users(username, password) VALUES ($1, $2);`;
                     let value = [userName, password];
                     return client.query(SQL, value).then(() => {
