@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../public/style/books-style/index-style.css">
+    <title>Books Search Results</title>
+</head>
+
+<body>
+
+    <div id="anchor">
+    <a href="/book">Back To Home Page</a>
+    </div>
+    <% x.forEach((value,index) =>{ %>
+    <div id="fav">
+        <div id="topFav">
+        <img src="<%= value.image_url %>">
+        <h2>
+            <%= value.title %>
+        </h2>
+        <h4 id="author">
+            <%= value.author %>
+        </h4>
+    </div>
+        <button id="detailsBtn" type="submit" value="Show Details"
+            onclick="location.href = `/books/<%= value.id %>`;">Show Details</button>
+
+    </div>
+    <% }); %>
+</body>
+
+</html>

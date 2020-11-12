@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../public/style/books-style/search-for-book-style.css">
+    <title>search for a book</title>
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+        <a href="/category"><img class="homeButn" src="../../../public/style/home.png"></a>
+        <div class="container">
+            <div id="title">
+                <h1>invest your time by reading </h1>
+            </div>
+
+            <form action="/searches" method="post">
+                <div class="form-field">
+                    <label for="name">What Do You Want To Read?</label><br>
+                    <input type="text" name="search" class="input" placeholder="" id="name">
+                </div>
+                <div class="form-field">
+                    <label for="">Select By:</label><br>
+                    <span class="searchButton"><input type="radio" name="search" value="authors" id="autor">&nbsp; Author</span>
+                    <span class="searchButton"><input type="radio" name="search" value="title" id="title">&nbsp; Title</span>
+                </div>
+                <div class="form-field">
+                    <button type="submit">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Search
+                    </button>
+                </div>
+            </form>
+            <div id="viewFav">
+                <a href="/myFavBooks">View My Favourite Books</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html>

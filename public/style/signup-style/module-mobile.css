@@ -1,0 +1,123 @@
+@media screen and (max-width: 766px){
+    #myVideo{
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%; 
+        min-height: 100%;
+        z-index: -999;
+    }
+    .formbox .form-lables {
+        margin: 0;
+        padding: 0;
+        font-weight: bolder;
+        font-size: 120%;
+        color: #264e36;
+    
+    }
+    .formbox .signUp-p{
+        margin: 0;
+        padding: 0 0 4% 0;
+        font-weight: bold;
+        font-size: 110%;
+        color: #2A293E;
+    }
+    .formbox input[type="email"],input[type="password"]{
+        background-color: rgba(128,128,128,0);
+        border: none;
+        border-bottom: 2px solid #2A293E;
+        outline: none;
+        height: 40px;
+    
+    }
+    .formbox input[type="email"]:focus,input[type="password"]:focus{
+        border-bottom: 2px solid  #264e36;
+    }
+    .formbox button{
+        width: 80%;
+        position: relative;
+        display: inline-block;
+        margin-bottom:6% ;
+        border: none;
+        outline: none;
+        font-weight: bolder;
+        font-size: 100%;
+        height: 35px;
+        color: #264e36;
+        background-color:rgba(128,128,128,0);
+        cursor: pointer;
+        overflow: hidden;
+        transition: 0.2s;
+    }
+    
+    .formbox a{
+        display: inline-block;
+        position: relative;
+        color:  #264e36;
+        font-size: 110%;
+        font-weight: bolder;
+        text-decoration: none;
+        
+    }
+    .formbox button:hover{
+        color: #a6af13;
+        background: #2A293E;
+        box-shadow: 0 0 10px#2A293E , 0 0 40px #2A293E , 0 0 80px #2A293E;
+        transition: .1s;
+        transition-delay: 1s;
+    }
+    .formbox button span{ 
+        position: absolute;
+        display: block;
+    }
+    .formbox button span:nth-child(1) {
+        left: -100%;
+        top: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg,transparent , #2A293E);
+    }
+    .formbox button:hover span:nth-child(1) {
+        left: 100%;
+        transition: 1s;
+    }
+    .formbox button span:nth-child(3) {
+        right: -100%;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(270deg,transparent , #2A293E);
+    }
+    .formbox button:hover span:nth-child(3) {
+        right:  100%;
+        transition: 1s;
+        transition-delay: 0.5s;
+    }
+    
+    .formbox button span:nth-child(2) {
+        top: -100%;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(180deg,transparent , #2A293E);
+    }
+    .formbox button:hover span:nth-child(2) {
+        top:  100%;
+        transition: 1s;
+        transition-delay: 0.25s;
+    }
+    
+    .formbox button span:nth-child(4) {
+        top: 100%;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(360deg,transparent , #2A293E);
+    }
+    .formbox button:hover span:nth-child(4) {
+        top:  -100%;
+        transition: 1s;
+        transition-delay: 0.75s;
+    }
+
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="/public/style/sign-in-style.css">
+   
+</head>
+
+<body>
+ <div  class="video">
+     <video id="myVideo" autoplay muted loop src="https://assets.mixkit.co/videos/preview/mixkit-cliffs-in-the-sea-aerial-shot-1952-large.mp4"></video>
+
+ </div>
+    <div class="container">
+        
+        <div class="right">
+            <div class="formbox">
+                <form action="/signin" method="POST">
+                    <p class="form-lables">E-mail</p>
+                    <input type="email" name="username" value="" placeholder="Online" pattern="^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.(com||net||org)$" title="is not a valid email address" required>
+                    <p class="form-lables">Password</p>
+                    <input type="password" name="password" value="" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$" title="password between 8 to 15 characters which contain at least one lowercase letter,one uppercase letter, one numeric digit, and one special character" required>
+                    <br>
+                    <button type="submit">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Sign in
+                    </button>
+                    <p class="signUp-p">Don’t have an account?</p>
+                    <a href="/signup-page">Sign up</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    
+</body>
+
+</html>

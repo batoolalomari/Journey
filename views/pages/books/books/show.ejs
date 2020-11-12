@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../../../public/styles/index-style.css"> -->
+    <link rel="stylesheet" href="../../../../public/style/books-style/one-book-details-style.css">
+    <title>One Book Details</title>
+
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <%- include('detail') %>
+        <%- include('edit') %>
+
+        <button id="updatebutton">Update Book</button>
+        <form action="/books/<%= x.id %>?_method=DELETE" method="POST">
+            <input type="hidden" value="<%= x.id %>" name="id">
+            <input type="submit" value="Delete">
+        </form>
+
+
+
+    </div>
+    <a href="/book">Back To Home Page</a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../../../../public/js/app.js"></script>
+</body>
+
+</html>
