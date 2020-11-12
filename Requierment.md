@@ -41,9 +41,11 @@ Analysts
 2. Ahmad Almohammad
 
 **1.2.3 Minimum Viable Product**
+
 The MVP for our project is to make a full website of apps including one app with full functionality.
 
 **1.2.4 Stretch**
+
 We put amusic app as stretch goal for us to implement in the up comming days.
 
 # 1.3 Functional Requirements
@@ -76,21 +78,23 @@ The user will enter to our wesbsite "Journey", the start web pag will appear tha
 
 # 1.5 Non-Functional Requirements 
 
-1. Usability
+### 1. Usability
 
-NF1: The system shall be easy to use. 
-NF2: No technical skills shall be required to use the system.
-NF3: The system shall provides easy navigation for the user.
+- NF1: The system shall be easy to use. 
+- NF2: No technical skills shall be required to use the system.
+- NF3: The system shall provides easy navigation for the user.
 
 Our project easy for the user it dose not need any technical skill on it ,so when the user enter our to our website it easy to him to move in it and also for the signinand sign up it is usfull for him to sign to our website aslso the button to back to the home page is easy and simple to him click on it and know that it will back him the home page this as an example .
 
-2. Performance
-NF4: The system shall be able to respond to any action at most 100ms.
+### 2. Performance
+
+- NF4: The system shall be able to respond to any action at most 100ms.
 
 Any click that the user on our website it will not take more 100ms to response to him as example when the user click signIn button it will not take more than 100ms to move him to the app page also when he click back to home button 
 
-3.Security
-NF5: The Email and password shall be required to the active screen.
+### 3.Security
+
+- NF5: The Email and password shall be required to the active screen.
 
 In our website the Email and password are field display for the user in the page 
 
