@@ -2,7 +2,7 @@
 
 # Project Name : Journey 
 
-# Team members:
+# Journey Team members:
 
 ### 1- Ahmad Al-Mohammad
 
