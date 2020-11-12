@@ -53,6 +53,18 @@ Our app for entertainment the user  , we will create a vital environment with go
 
 ![](doman.png)
 
+## wireframe :
+
+## color palette :
+
+![](color.png)
+
+![](color2.png)
+
+![](color3.png)
+
+
+
 
 
 
